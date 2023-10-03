@@ -50,8 +50,11 @@ An example config.json file to be place beside the `d-fi.exe` can look something
     pip install -r requirements.txt
     ```
 3. Update the script with your Spotify and Plex credentials.
-4. Prepare `playlists.json` with your Spotify playlist URLs.
-5. Run the script:
+    Line 16/17 is Spotify credentials
+    Line 75/76 is Plex URl and Token
+    Line 193 is your CLI command to download a track
+5. Prepare `playlists.json` with your Spotify playlist URLs.
+6. Run the script:
     ```bash
     python script_name.py
     ```
