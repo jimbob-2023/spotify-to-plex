@@ -4,9 +4,38 @@ A script to synchronize Spotify playlists with a Plex Media Server.
 ## Features:
 - Fetches playlists from Spotify using their API.
 - Searches for those songs on a local Plex Media Server.
-- If songs from Spotify playlists are not found on Plex, they can be downloaded using an external command line tool.
+- If songs from Spotify playlists are not found on Plex, they can be downloaded using an external command line too, example in this .py code is to use  [d-fi](https://notabug.org/sayem314/d-fi) 
 - Updates Plex playlists based on Spotify playlists.
 - Creates logs of missing tracks.
+
+To get [d-fi](https://notabug.org/sayem314/d-fi) set up, visit the link and download the executable, placing it in the same folder as your script in this repo, then you're ready for downloading tracks from Spotify. As part of the d-fi config.json file, you will need an [ARR token](https://rentry.org/firehawk52#deezer-arls) for downloading from the server
+
+An example config.json file to be place beside the `d-fi.exe` can look something like this:
+```
+{
+  "concurrency": 4,
+  "saveLayout": {
+    "track": "YOURPLEXMUSICPATH/{ALB_TITLE}/{SNG_TITLE}",
+    "album": "YOURPLEXMUSICPATH/{ALB_TITLE}/{SNG_TITLE}",
+    "artist": "YOURPLEXMUSICPATH/{ALB_TITLE}/{SNG_TITLE}",
+    "playlist": "YOURPLEXMUSICPATH/{TITLE}/{SNG_TITLE}"
+  },
+  "playlist": {
+    "resolveFullPath": false
+  },
+  "trackNumber": true,
+  "fallbackTrack": true,
+  "fallbackQuality": true,
+  "coverSize": {
+    "128": 500,
+    "320": 500,
+    "flac": 1000
+  },
+  "cookies": {
+    "arl": "ARLKEYGOESHERE"
+  }
+}
+```
 
 ## Requirements:
 - Plex Media Server setup and running.
