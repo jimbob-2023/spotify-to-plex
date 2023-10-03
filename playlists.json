@@ -1,0 +1,8 @@
+{
+  "https://open.spotify.com/playlist/xxxxxxxx": {
+    "override": true
+  },
+"https://open.spotify.com/playlist/yyyyyyyyyy": {
+    "override": true
+  }
+}
